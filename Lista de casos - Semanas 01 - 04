@@ -1,0 +1,512 @@
+1.-
+
+public class Main
+{
+	public static void main(String[] args) {
+		 // Declaración de las variables enteras x e y
+        int x = 144;
+        int y = 999;
+        
+        // Mostrar el valor de x e y
+        System.out.println("El valor de x es: " + x);
+        System.out.println("El valor de y es: " + y);
+        
+        // Realizar operaciones matemáticas
+        int suma = x + y;
+        int resta = x - y;
+        int multiplicacion = x * y;
+        double division = (double) x / y; // Utilizamos cast para obtener un resultado decimal
+        
+        // Mostrar los resultados
+        System.out.println("La suma de x e y es: " + suma);
+        System.out.println("La resta de x e y es: " + resta);
+        System.out.println("La multiplicación de x e y es: " + multiplicacion);
+        System.out.println("La división de x entre y es: " + division);
+	}
+}
+
+2.- 
+
+    public static void main(String[] args) {
+        // Declaración de las variables
+        String nombre = "Juan Pérez";
+        String direccion = "123 Calle Principal";
+        String telefono = "555-123-4567";
+        
+        // Mostrar los valores de las variables
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Dirección: " + direccion);
+        System.out.println("Teléfono: " + telefono);
+    }
+}
+
+3.-  public static void main(String[] args) {
+        // Cantidad en euros que se quiere convertir
+        double euros = 50.0; // Puedes cambiar este valor según tu necesidad
+        
+        // Factor de conversión: 1 euro = 166.386 pesetas (valor aproximado)
+        double factorConversion = 166.386;
+        
+        // Realizar la conversión
+        double pesetas = euros * factorConversion;
+        
+        // Mostrar el resultado
+        System.out.println(euros + " euros equivalen a " + pesetas + " pesetas.");
+    }
+}
+
+4.- public static void main(String[] args) {
+        // Cantidad en soles que se quiere convertir
+        double soles = 100.0; // Puedes cambiar este valor según tu necesidad
+        
+        // Tasa de cambio: 1 euro = 4.0 soles (valor aproximado)
+        double tasaCambio = 0.25;
+        
+        // Realizar la conversión
+        double euros = soles * tasaCambio;
+        
+        // Mostrar el resultado
+        System.out.println(soles + " soles equivalen a " + euros + " euros.");
+    }
+}
+
+5.-  public static void main(String[] args) {
+        // Horas trabajadas por el empleado
+        int horasTrabajadas = 40; // Puedes cambiar este valor según las horas trabajadas
+        
+        // Tarifa por hora
+        double tarifaPorHora = 12.0;
+        
+        // Calcular el salario semanal
+        double salarioSemanal = horasTrabajadas * tarifaPorHora;
+        
+        // Mostrar el resultado
+        System.out.println("El salario semanal del empleado es: " + salarioSemanal + " euros.");
+    }
+}
+
+6.-  public static void main(String[] args) {
+        // Cantidad en Megabytes que se desea convertir
+        double megabytes = 5.0; // Puedes cambiar este valor según tu necesidad
+        
+        // Factor de conversión: 1 MB = 1024 KB
+        double factorConversion = 1024.0;
+        
+        // Realizar la conversión
+        double kilobytes = megabytes * factorConversion;
+        
+        // Mostrar el resultado
+        System.out.println(megabytes + " MB equivalen a " + kilobytes + " KB.");
+    }
+}
+
+7.-   public static void main(String[] args) {
+        // Nota obtenida en el primer examen (40%)
+        double notaPrimerExamen = 7.0; // Puedes cambiar este valor según tu situación
+        
+        // Media deseada
+        double mediaDeseada = 8.0; // Puedes cambiar este valor según tu objetivo
+        
+        // Porcentaje de ponderación del primer examen y del segundo examen
+        double porcentajePrimerExamen = 0.4;
+        double porcentajeSegundoExamen = 0.6;
+        
+        // Calcular la nota necesaria en el segundo examen
+        double notaNecesariaSegundoExamen = (mediaDeseada - (notaPrimerExamen * porcentajePrimerExamen)) / porcentajeSegundoExamen;
+        
+        // Mostrar el resultado
+        System.out.println("Para obtener una media deseada de " + mediaDeseada + " necesitas sacar " + notaNecesariaSegundoExamen + " en el segundo examen.");
+    }
+}
+
+8.- import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Por favor, introduce la hora (sin minutos): ");
+        int hora = scanner.nextInt();
+        
+        scanner.close(); // Cerramos el escáner
+        
+        String saludo;
+        
+        if (hora >= 6 && hora <= 12) {
+            saludo = "Buenos días";
+        } else if (hora >= 13 && hora <= 20) {
+            saludo = "Buenas tardes";
+        } else {
+            saludo = "Buenas noches";
+        }
+        
+        System.out.println(saludo);
+    }
+}
+
+9.- import main;
+
+public class CalculadoraSalarioSemanal {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Por favor, introduce el número de horas trabajadas esta semana: ");
+        int horasTrabajadas = scanner.nextInt();
+        
+        scanner.close(); // Cerramos el escáner
+        
+        double tarifaHoraNormal = 12.0;
+        double tarifaHoraExtra = 16.0;
+        int horasNormales = Math.min(40, horasTrabajadas); // Las primeras 40 horas se consideran normales
+        int horasExtras = Math.max(0, horasTrabajadas - 40); // Horas trabajadas después de las primeras 40
+        
+        // Calcular el salario semanal
+        double salarioSemanal = (horasNormales * tarifaHoraNormal) + (horasExtras * tarifaHoraExtra);
+        
+        // Mostrar el resultado
+        System.out.println("El salario semanal del trabajador es: " + salarioSemanal + " soles.");
+    }
+}
+
+10.- import java.util.Scanner;
+
+       public class main {
+       public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Por favor, introduce la altura desde la que cae el objeto (en metros): ");
+        double altura = scanner.nextDouble();
+        
+        scanner.close(); // Cerramos el escáner
+        
+        double gravedad = 9.81; // Aceleración debida a la gravedad en la Tierra
+        
+        // Calcular el tiempo de caída
+        double tiempoCaida = Math.sqrt((2 * altura) / gravedad);
+        
+        // Mostrar el resultado
+        System.out.println("El objeto tardará " + tiempoCaida + " segundos en caer desde una altura de " + altura + " metros.");
+    }
+}
+
+11.- import java.util.Scanner;
+
+       public class main {
+       public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Por favor, introduce la hora (en formato de 24 horas): ");
+        int horas = scanner.nextInt();
+        
+        System.out.print("Ahora, introduce los minutos: ");
+        int minutos = scanner.nextInt();
+        
+        scanner.close(); // Cerramos el escáner
+        
+        // Calcular los segundos hasta la medianoche
+        int segundosHastaMedianoche = (24 - horas) * 3600 + (60 - minutos) * 60;
+        
+        // Mostrar el resultado
+        System.out.println("Faltan " + segundosHastaMedianoche + " segundos para llegar a la                medianoche.");
+    }
+}
+
+12.- import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Por favor, introduce un número entero: ");
+        int numero = scanner.nextInt();
+        
+        scanner.close(); // Cerramos el escáner
+        
+        // Comprobar si el número es par y/o divisible entre 5
+        boolean esPar = numero % 2 == 0;
+        boolean esDivisibleEntre5 = numero % 5 == 0;
+        
+        if (esPar && esDivisibleEntre5) {
+            System.out.println("El número es par y divisible entre 5.");
+        } else if (esPar) {
+            System.out.println("El número es par pero no divisible entre 5.");
+        } else if (esDivisibleEntre5) {
+            System.out.println("El número no es par pero es divisible entre 5.");
+        } else {
+            System.out.println("El número no es par y no es divisible entre 5.");
+        }
+    }
+}
+
+13.- import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Por favor, introduce un número entero (positivo o negativo, hasta 5 dígitos): ");
+        int numero = scanner.nextInt();
+        
+        scanner.close(); // Cerramos el escáner
+        
+        // Convertir el número a positivo si es negativo
+        int numeroPositivo = Math.abs(numero);
+        
+        // Contar los dígitos del número
+        int cantidadDigitos = String.valueOf(numeroPositivo).length();
+        
+        // Mostrar el resultado
+        System.out.println("El número " + numero + " tiene " + cantidadDigitos + " dígitos.");
+    }
+}
+
+14.- 
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Por favor, introduce el día de la semana (de lunes a viernes): ");
+        String diaSemana = scanner.nextLine().toLowerCase();
+        
+        System.out.print("Ahora, introduce la hora (en formato de 24 horas): ");
+        int hora = scanner.nextInt();
+        
+        System.out.print("Por último, introduce los minutos: ");
+        int minutos = scanner.nextInt();
+        
+        scanner.close(); // Cerramos el escáner
+        
+        int minutosHastaFinDeSemana = 0;
+        
+        if (diaSemana.equals("viernes")) {
+            if (hora < 15) {
+                minutosHastaFinDeSemana = (15 - hora) * 60 - minutos;
+            }
+        } else {
+            if (diaSemana.equals("lunes")) {
+                minutosHastaFinDeSemana = (4 * 24 + 15 - hora) * 60 - minutos;
+            } else {
+                int diasRestantes = 5 - diaNumero(diaSemana);
+                minutosHastaFinDeSemana = (diasRestantes * 24 * 60 + 15 - hora) * 60 - minutos;
+            }
+        }
+        
+        if (minutosHastaFinDeSemana <= 0) {
+            System.out.println("¡Ya es fin de semana!");
+        } else {
+            System.out.println("Faltan " + minutosHastaFinDeSemana + " minutos para el fin de semana.");
+        }
+    }
+    
+    // Función para convertir el nombre del día en un número (lunes=1, martes=2, ..., viernes=5)
+    public static int diaNumero(String dia) {
+        switch (dia) {
+            case "lunes":
+                return 1;
+            case "martes":
+                return 2;
+            case "miércoles":
+                return 3;
+            case "jueves":
+                return 4;
+            case "viernes":
+                return 5;
+            default:
+                return 0; // Valor predeterminado en caso de entrada no válida
+        }
+    }
+}
+
+15.- 
+import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Combinación de la caja fuerte (cambia esto por tu propia combinación)
+        int combinacion = 1234;
+        
+        int intentos = 4; // Número de intentos permitidos
+        
+        for (int i = 1; i <= intentos; i++) {
+            System.out.print("Por favor, introduce la combinación de la caja fuerte (4 cifras): ");
+            int intento = scanner.nextInt();
+            
+            // Verificar si la combinación es correcta
+            if (intento == combinacion) {
+                System.out.println("La caja fuerte se ha abierto satisfactoriamente.");
+                break; // Salir del bucle si la combinación es correcta
+            } else {
+                System.out.println("Lo siento, esa no es la combinación. Intento " + i + " de " + intentos);
+                
+                if (i == intentos) {
+                    System.out.println("Has agotado todos los intentos. La caja fuerte permanece cerrada.");
+                }
+            }
+        }
+        
+        scanner.close(); // Cerramos el escáner
+    }
+}
+
+16.- import java.util.Scanner;
+
+    public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int cantidadPositivos = 0;
+        int cantidadNegativos = 0;
+        
+        for (int i = 1; i <= 10; i++) {
+            System.out.print("Ingresa el número " + i + ": ");
+            int numero = scanner.nextInt();
+            
+            if (numero > 0) {
+                cantidadPositivos++;
+            } else if (numero < 0) {
+                cantidadNegativos++;
+            }
+        }
+        
+        scanner.close(); // Cerramos el escáner
+        
+        // Mostrar los resultados
+        System.out.println("Cantidad de números positivos: " + cantidadPositivos);
+        System.out.println("Cantidad de números negativos: " + cantidadNegativos);
+    }
+}
+
+17.- import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        int contadorNumeros = 0;
+        int sumaImpares = 0;
+        int mayorPar = Integer.MIN_VALUE;
+        
+        while (true) {
+            System.out.print("Ingresa un número (o un número negativo para finalizar): ");
+            int numero = scanner.nextInt();
+            
+            if (numero < 0) {
+                break; // Salir del bucle si se ingresa un número negativo
+            }
+            
+            contadorNumeros++;
+            
+            if (numero % 2 != 0) {
+                sumaImpares += numero;
+            } else {
+                if (numero > mayorPar) {
+                    mayorPar = numero;
+                }
+            }
+        }
+        
+        scanner.close(); // Cerramos el escáner
+        
+        if (contadorNumeros == 0) {
+            System.out.println("No se ha introducido ningún número.");
+        } else {
+            double mediaImpares = (double) sumaImpares / contadorNumeros;
+            
+            System.out.println("Cantidad de números introducidos: " + contadorNumeros);
+            System.out.println("Media de los números impares: " + mediaImpares);
+            
+            if (mayorPar != Integer.MIN_VALUE) {
+                System.out.println("El mayor número par introducido: " + mayorPar);
+            } else {
+                System.out.println("No se han introducido números pares.");
+            }
+        }
+    }
+}
+
+18.- import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Por favor, introduce un número límite: ");
+        int limite = scanner.nextInt();
+        
+        System.out.print("Ahora, introduce un número por el cual no deben ser divisibles: ");
+        int divisor = scanner.nextInt();
+        
+        scanner.close(); // Cerramos el escáner
+        
+        System.out.println("Números enteros positivos menores a " + limite + " que no son divisibles por " + divisor + ":");
+        
+        for (int i = 1; i < limite; i++) {
+            if (i % divisor != 0) {
+                System.out.print(i + " ");
+            }
+        }
+    }
+}
+
+
+19.- import java.util.Scanner;
+
+public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Por favor, introduce la altura de la letra L: ");
+        int altura = scanner.nextInt();
+        
+        scanner.close(); // Cerramos el escáner
+        
+        if (altura < 2) {
+            System.out.println("La altura debe ser mayor o igual a 2.");
+        } else {
+            // Pintar la letra L
+            for (int i = 1; i <= altura; i++) {
+                if (i != altura) {
+                    System.out.println("*");
+                } else {
+                    for (int j = 1; j <= (altura / 2) + 1; j++) {
+                        System.out.print("*");
+                    }
+                    System.out.println();
+                }
+            }
+        }
+    }
+}
+
+20.- public class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Por favor, introduce un número entero: ");
+        long numero = scanner.nextLong();
+        
+        scanner.close(); // Cerramos el escáner
+        
+        System.out.print("Dígitos pares en orden de izquierda a derecha: ");
+        long sumaPares = 0;
+        
+        while (numero != 0) {
+            long digito = numero % 10;
+            if (digito % 2 == 0) {
+                System.out.print(digito + " ");
+                sumaPares += digito;
+            }
+            numero /= 10;
+        }
+        
+        if (sumaPares > 0) {
+            System.out.println("\nLa suma de los dígitos pares es: " + sumaPares);
+        } else {
+            System.out.println("\nNo hay dígitos pares en el número.");
+        }
+    }
+}
